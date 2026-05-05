@@ -24,11 +24,11 @@ set -euo pipefail
 ############################################
 # ==== USER CONFIG / ENV ====================
 ############################################
+###name the  service name for docker swarm 
 service_name="dwdm"
-scale_up_replicated_services11="/etc/sinacomsys/restoration/up.sh"
 
 MYSQL_VOLUME_NAME="dwdm_mysql_data"
-config_path=$(find /etc/sinacomsys/ -maxdepth 1 -type f -name "*.yaml" | head -n1)
+config_path=$(find /etc/path to your swarm config/ -maxdepth 1 -type f -name "*.yaml" | head -n1)
 
 
 
