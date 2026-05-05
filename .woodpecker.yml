@@ -6,7 +6,7 @@ steps:
   build-image:
     image: plugins/docker
     settings:
-      repo: nmsbackup
+      repo: mysql-nmsbackup
       dry_run: true
       dockerfile: Dockerfile
 
