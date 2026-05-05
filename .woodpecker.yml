@@ -1,12 +1,12 @@
+when:
+  event: push
+  branch: main
+
 steps:
   build-image:
-    # We use the standard Docker plugin for Woodpecker
     image: plugins/docker
     settings:
-      # The name of the image to build
-      repo: my-backup-server-image
-      # dry_run: true means it will ONLY build the image and WILL NOT push it
+      repo: nmsbackup
       dry_run: true
-      # Specifies the path to your Dockerfile (optional if it's in the root directory)
       dockerfile: Dockerfile
 
