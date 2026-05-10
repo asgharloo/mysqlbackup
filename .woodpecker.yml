@@ -1,14 +1,21 @@
 when:
   event:
     - push
-    - manual  
+    - manual
   branch: main
 
 steps:
-  build-image:
-    image: plugins/docker
+  build-and-push:
+    image: woodpeckerci/plugin-docker-buildx
     settings:
-      repo: mysql-nmsbackup
-      dry_run: true
+      repo: 192.168.24.6:8080/ci-images/mysql-nmsbackup
+      registry: 192.168.24.6:8080
       dockerfile: Dockerfile
+      tags:
+        - latest
+      insecure: true
+      username:
+        from_secret: robot$ci-image+ci-images
+      password:
+        from_secret: 9Yt7npmgfC3faurBPVgeQtLdh4bLgfeR
 
