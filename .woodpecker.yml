@@ -15,7 +15,7 @@ steps:
         - latest
       insecure: true
       username:
-        from_secret: robot$ci-image+ci-images
+        from_secret: HARBOR_USER
       password:
-        from_secret: 9Yt7npmgfC3faurBPVgeQtLdh4bLgfeR
+        from_secret: HARBOR_PASS
 
