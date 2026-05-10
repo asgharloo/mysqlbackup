@@ -8,7 +8,7 @@ steps:
       tags:
         - latest
       insecure: true
-      buildkit_image: 192.168.24.6:8080/ci-images/buildkit:buildx-stable-1
+      buildkit_image: 192.168.24.7:8080/ci-images/buildkit:buildx-stable-1
       username:
         from_secret: HARBOR_USER
       password:
